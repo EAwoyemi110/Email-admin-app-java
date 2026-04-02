@@ -2,13 +2,22 @@ import java.util.Scanner;
 
 public class Email {
     private String firstName;
+
     private String lastName;
+
     private String password;
-    private String department = "Fashion";
+
+    private String department;
+
     private int mailboxCapacity;
+
     private int passwordDefaultLength = 10;
+
     private String altEmail;
 
+    private String email;
+
+    private String companySuffix = "SomethingBuisness.com";
 
     // Constructor to receive first and last name
     public Email(String firstName, String lastName) {
@@ -21,6 +30,10 @@ public class Email {
 
         this.password = randomPassword(passwordDefaultLength);
         System.out.println("Your password is: " + this.password);
+
+        //combine everything to make an email
+        email = firstName.toLowerCase() + "." + lastName.toLowerCase() + "@" + department + "." + companySuffix;
+        System.out.println("Your email is: " + email);
     }
 
     // Call method setting up their department email and return their new email
@@ -60,5 +73,9 @@ public class Email {
     }
 
 
+
+
+
+
+
 }
-//Generate random number and treat password as an array and use number as the index
