@@ -9,7 +9,7 @@ public class Email {
 
     private String department;
 
-    private int mailboxCapacity;
+    private int mailboxCapacity = 10000;
 
     private int passwordDefaultLength = 10;
 
@@ -72,6 +72,18 @@ public class Email {
 
     }
 
+    public void setMailboxCapacity(int capacity) {
+        this.mailboxCapacity = capacity;
+    }
+    //methods are apis?
+
+    public void setAltternateEmail(String altEmail) {
+        this.altEmail = altEmail;
+    }
+
+    public void changePassword(String password) {
+        this.password = password;
+    }
 
 
 
